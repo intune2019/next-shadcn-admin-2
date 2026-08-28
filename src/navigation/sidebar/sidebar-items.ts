@@ -65,6 +65,54 @@ export interface NavGroup {
 export const sidebarItems: NavGroup[] = [
   {
     id: 1,
+    label: "Home",
+    items: [
+      {
+        id: "home",
+        title: "Home",
+        url: "/dashboard/productivity",
+        icon: ListTodo,
+      },
+    ],
+  },
+  {
+    id: 2,
+    label: "Clone Pages",
+    items: [
+      {
+        id: "clone-crm",
+        title: "CRM",
+        url: "/dashboard/crm",
+        icon: ChartBar,
+      },
+      {
+        id: "clone-ecommerce",
+        title: "Ecommerce",
+        url: "/dashboard/ecommerce",
+        icon: ShoppingBag,
+      },
+      {
+        id: "clone-default-v1",
+        title: "Default v1",
+        url: "/dashboard/default-v1",
+        icon: LayoutDashboard,
+      },
+      {
+        id: "clone-file-manager",
+        title: "File Manager",
+        url: "/dashboard/file-manager",
+        icon: FolderOpen,
+      },
+      {
+        id: "clone-analytics-v1",
+        title: "Analytics v1",
+        url: "/dashboard/analytics-v1",
+        icon: Gauge,
+      },
+    ],
+  },
+  {
+    id: 3,
     label: "Dashboards",
     items: [
       {
@@ -90,12 +138,6 @@ export const sidebarItems: NavGroup[] = [
         title: "Analytics",
         url: "/dashboard/analytics",
         icon: Gauge,
-      },
-      {
-        id: "productivity",
-        title: "Productivity",
-        url: "/dashboard/productivity",
-        icon: ListTodo,
       },
       {
         id: "ecommerce",
@@ -138,7 +180,7 @@ export const sidebarItems: NavGroup[] = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     label: "Pages",
     items: [
       {
@@ -210,7 +252,7 @@ export const sidebarItems: NavGroup[] = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     label: "Legacy",
     items: [
       {
@@ -226,7 +268,7 @@ export const sidebarItems: NavGroup[] = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     label: "Misc",
     items: [
       {
