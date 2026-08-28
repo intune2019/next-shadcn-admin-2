@@ -87,7 +87,7 @@ function formatCurrencyTooltipValue(value: unknown) {
 
 export function KpiStrip() {
   return (
-    <div className="h-full overflow-hidden rounded-xl bg-card ring-1 ring-foreground/10 xl:col-span-12">
+    <div className="my-0 overflow-hidden rounded-[9px] bg-card px-0 py-0 ring-1 ring-foreground/10 xl:col-span-12">
       <div>
         <div className="grid grid-cols-1 xl:grid-cols-12">
           <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 xl:col-span-5 xl:border-r">

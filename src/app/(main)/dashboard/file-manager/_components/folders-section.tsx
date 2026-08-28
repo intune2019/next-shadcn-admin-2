@@ -10,14 +10,16 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Empty, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from "@/components/ui/empty";
+import { cn } from "@/lib/utils";
 
 import type { FileManagerFolder } from "./data";
 
 interface FoldersSectionProps {
   folders: FileManagerFolder[];
+  className?: string;
 }
 
-export function FoldersSection({ folders }: FoldersSectionProps) {
+export function FoldersSection({ folders, className }: FoldersSectionProps) {
   return (
     <section className="flex flex-col gap-2" aria-labelledby="folders-heading">
       <div className="flex items-center justify-between">
@@ -25,7 +27,7 @@ export function FoldersSection({ folders }: FoldersSectionProps) {
         <span className="text-muted-foreground text-sm">{folders.length} folders</span>
       </div>
       {folders.length > 0 ? (
-        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        <div className={cn("grid gap-3 sm:grid-cols-2 xl:grid-cols-4", className)}>
           {folders.map((folder) => (
             <Card key={folder.id} size="sm">
               <CardHeader>

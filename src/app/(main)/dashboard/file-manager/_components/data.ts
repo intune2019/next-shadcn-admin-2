@@ -68,20 +68,6 @@ export const folders: FileManagerFolder[] = [
     size: "620 MB",
     updatedAt: "Jul 27",
   },
-  {
-    id: "marketing",
-    name: "Marketing",
-    fileCount: 29,
-    size: "2.3 GB",
-    updatedAt: "Jul 25",
-  },
-  {
-    id: "team-resources",
-    name: "Team resources",
-    fileCount: 18,
-    size: "1.2 GB",
-    updatedAt: "Jul 22",
-  },
 ];
 
 export const files: FileManagerFile[] = [
