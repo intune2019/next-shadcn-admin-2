@@ -22,7 +22,6 @@ export default function Page() {
         <ProjectsSection />
         <KpiStrip />
         <OpportunitiesSection />
-        <FoldersSection folders={folders} />
       </section>
 
       <aside className="flex min-w-0 flex-col gap-4 lg:col-span-3">
@@ -30,6 +29,7 @@ export default function Page() {
         <TasksSection />
         <RecentNotesCard />
         <SummaryCards className="grid-cols-1 md:grid-cols-1 [&>*:last-child]:hidden" />
+        <FoldersSection folders={folders} className="grid-cols-1 sm:grid-cols-1 xl:grid-cols-1" />
       </aside>
     </div>
   );
