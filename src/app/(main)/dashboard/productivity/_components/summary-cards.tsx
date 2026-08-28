@@ -1,6 +1,7 @@
 import { ArrowRight, Clock3, Focus, TrendingUp } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 const summaryCards = [
   { title: "Today", value: "4", description: "tasks scheduled", icon: Clock3 },
@@ -8,9 +9,9 @@ const summaryCards = [
   { title: "Focus", value: "Deep Work", description: "2 hours remaining", icon: Focus },
 ] as const;
 
-export function SummaryCards() {
+export function SummaryCards({ className }: { className?: string } = {}) {
   return (
-    <div className="grid gap-4 md:grid-cols-3">
+    <div className={cn("grid gap-4 md:grid-cols-3", className)}>
       {summaryCards.map((item) => (
         <Card key={item.title} className="shadow-xs">
           <CardHeader>
