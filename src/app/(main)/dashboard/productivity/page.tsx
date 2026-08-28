@@ -12,20 +12,20 @@ import { TasksSection } from "./_components/tasks-section";
 
 export default function Page() {
   return (
-    <div className="grid gap-6 lg:grid-cols-12">
-      <section className="flex min-w-0 flex-col gap-6 lg:col-span-9">
-        <div className="flex flex-col gap-2">
-          <h1 className="text-3xl text-foreground leading-none tracking-tight">Good morning, Arham.</h1>
-          <p className="text-lg text-muted-foreground leading-none">Let&apos;s make today productive and meaningful.</p>
+    <div className="grid gap-4 lg:grid-cols-12">
+      <section className="flex min-w-0 flex-col gap-4 lg:col-span-9">
+        <div className="flex flex-col gap-1">
+          <h1 className="text-xl text-foreground leading-none tracking-tight">Good morning, Arham.</h1>
+          <p className="text-xs text-muted-foreground leading-none">Let&apos;s make today productive and meaningful.</p>
         </div>
-        <QuickActions />
+        <QuickActions showTitle={false} />
         <ProjectsSection />
         <KpiStrip />
         <OpportunitiesSection />
         <FoldersSection folders={folders} />
       </section>
 
-      <aside className="flex min-w-0 flex-col gap-6 lg:col-span-3">
+      <aside className="flex min-w-0 flex-col gap-4 lg:col-span-3">
         <TaskReminders showUpcomingMeetings={false} />
         <TasksSection />
         <RecentNotesCard />

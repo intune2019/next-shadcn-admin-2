@@ -10,10 +10,10 @@ const quickActions = [
   { label: "Upload", icon: Upload },
 ] as const;
 
-export function QuickActions() {
+export function QuickActions({ showTitle = true }: { showTitle?: boolean } = {}) {
   return (
     <section className="flex flex-col gap-2">
-      <h2 className="text-xl tracking-tight">Quick Actions</h2>
+      {showTitle ? <h2 className="text-xl tracking-tight">Quick Actions</h2> : null}
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
         {quickActions.map((action) => (
           <Button key={action.label} variant="outline" className="justify-start">
