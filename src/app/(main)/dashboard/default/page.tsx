@@ -1,4 +1,6 @@
 import { MetricCards } from "./_components/metric-cards";
+import { AppleStyleDock } from "@/components/ui/dock";
+
 import { PerformanceOverview } from "./_components/performance-overview";
 import { SubscriberOverview } from "./_components/subscriber-overview";
 
@@ -8,6 +10,7 @@ export default function Page() {
       <MetricCards />
       <PerformanceOverview />
       <SubscriberOverview />
+      <AppleStyleDock />
     </div>
   );
 }
