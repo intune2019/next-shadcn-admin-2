@@ -113,11 +113,11 @@ export function NavMain({ items }: NavMainProps) {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <SidebarMenuButton
-                    tooltip="Quick Create"
+                    tooltip="Open Module"
                     className="min-w-8 bg-primary text-primary-foreground duration-200 ease-linear hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground"
                   >
                     <PlusCircleIcon />
-                    <span>Quick Create</span>
+                    <span>Open Module</span>
                   </SidebarMenuButton>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent side="right" align="start" sideOffset={12} className="w-64">
