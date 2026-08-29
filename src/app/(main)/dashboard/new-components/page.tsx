@@ -11,6 +11,7 @@ import FormLayout02 from "@/components/ui/form-1";
 import InputModel from "@/components/ui/input-model";
 import { OrderTrackingDemo } from "@/components/ui/order-tracking-demo";
 import SignupForm from "@/components/ui/login-signup";
+import SonnerPositionDemo from "@/components/ui/sonner-position-demo";
 import StepsWithNavigation from "@/components/ui/steps-with-navigation";
 import {
   Card,
@@ -162,6 +163,16 @@ export default function Page() {
           </CardHeader>
           <CardContent className="p-0">
             <StepsWithNavigation />
+          </CardContent>
+        </Card>
+
+        <Card className="md:col-span-2">
+          <CardHeader>
+            <CardTitle>Sonner positions</CardTitle>
+            <CardDescription>Trigger notifications from each supported corner and center position.</CardDescription>
+          </CardHeader>
+          <CardContent className="p-0">
+            <SonnerPositionDemo />
           </CardContent>
         </Card>
       </div>
