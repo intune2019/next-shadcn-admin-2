@@ -79,6 +79,12 @@ export const sidebarItems: NavGroup[] = [
         url: "/dashboard/default",
         icon: LayoutDashboard,
       },
+      {
+        id: "new-components",
+        title: "New Components",
+        url: "/dashboard/new-components",
+        icon: LayoutDashboard,
+      },
     ],
   },
   {
