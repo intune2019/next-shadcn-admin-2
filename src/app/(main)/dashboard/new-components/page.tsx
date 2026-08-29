@@ -1,6 +1,7 @@
 import { Globe, Search } from "lucide-react";
 
 import { GlobeCdn } from "@/components/ui/cobe-globe-cdn";
+import InputModel from "@/components/ui/input-model";
 import {
   Card,
   CardContent,
@@ -43,6 +44,10 @@ export default function Page() {
             <GlobeCdn className="w-full max-w-sm" />
           </CardContent>
         </Card>
+
+        <div className="md:col-span-2">
+          <InputModel />
+        </div>
       </div>
     </div>
   );
