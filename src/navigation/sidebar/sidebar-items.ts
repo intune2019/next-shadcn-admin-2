@@ -73,84 +73,42 @@ export const sidebarItems: NavGroup[] = [
         url: "/dashboard/productivity",
         icon: ListTodo,
       },
+      {
+        id: "default",
+        title: "Overview",
+        url: "/dashboard/default",
+        icon: LayoutDashboard,
+      },
     ],
   },
   {
     id: 2,
-    label: "Clone Pages",
+    label: "PM / Project Work",
     items: [
       {
-        id: "clone-crm",
-        title: "CRM",
-        url: "/dashboard/crm",
-        icon: ChartBar,
+        id: "kanban",
+        title: "Project Board",
+        url: "/dashboard/kanban",
+        icon: Kanban,
       },
       {
-        id: "clone-ecommerce",
-        title: "Ecommerce",
-        url: "/dashboard/ecommerce",
-        icon: ShoppingBag,
+        id: "tasks",
+        title: "Tasks",
+        url: "/dashboard/tasks",
+        icon: CheckSquare,
       },
       {
-        id: "clone-default-v1",
-        title: "Default v1",
-        url: "/dashboard/default-v1",
-        icon: LayoutDashboard,
-      },
-      {
-        id: "clone-file-manager",
-        title: "File Manager",
-        url: "/dashboard/file-manager",
-        icon: FolderOpen,
-      },
-      {
-        id: "clone-analytics-v1",
-        title: "Analytics v1",
-        url: "/dashboard/analytics-v1",
-        icon: Gauge,
+        id: "calendar",
+        title: "Calendar",
+        url: "/dashboard/calendar",
+        icon: Calendar,
       },
     ],
   },
   {
     id: 3,
-    label: "Dashboards",
+    label: "Field Work",
     items: [
-      {
-        id: "default",
-        title: "Default",
-        url: "/dashboard/default",
-        icon: LayoutDashboard,
-      },
-      {
-        id: "crm",
-        title: "CRM",
-        url: "/dashboard/crm",
-        icon: ChartBar,
-      },
-      {
-        id: "finance",
-        title: "Finance",
-        url: "/dashboard/finance",
-        icon: Banknote,
-      },
-      {
-        id: "analytics",
-        title: "Analytics",
-        url: "/dashboard/analytics",
-        icon: Gauge,
-      },
-      {
-        id: "ecommerce",
-        title: "E-commerce",
-        url: "/dashboard/ecommerce",
-        icon: ShoppingBag,
-      },
-      {
-        id: "academy",
-        title: "Academy",
-        url: "/dashboard/academy",
-        icon: GraduationCap,
-      },
       {
         id: "logistics",
         title: "Logistics",
@@ -170,19 +128,36 @@ export const sidebarItems: NavGroup[] = [
         icon: FolderOpen,
         badge: "new",
       },
-      {
-        id: "patient-monitoring",
-        title: "Patient Monitoring",
-        url: "/dashboard/patient-monitoring",
-        icon: HeartPulse,
-        badge: "new",
-      },
     ],
   },
   {
     id: 4,
-    label: "Pages",
+    label: "CRM & Accounting",
     items: [
+      {
+        id: "crm",
+        title: "CRM",
+        url: "/dashboard/crm",
+        icon: ChartBar,
+      },
+      {
+        id: "finance",
+        title: "Finance",
+        url: "/dashboard/finance",
+        icon: Banknote,
+      },
+      {
+        id: "invoice",
+        title: "Invoice",
+        url: "/dashboard/invoice",
+        icon: ReceiptText,
+      },
+      {
+        id: "ecommerce",
+        title: "E-commerce",
+        url: "/dashboard/ecommerce",
+        icon: ShoppingBag,
+      },
       {
         id: "email",
         title: "Email",
@@ -195,37 +170,12 @@ export const sidebarItems: NavGroup[] = [
         url: "/dashboard/chat",
         icon: MessageSquare,
       },
-      {
-        id: "calendar",
-        title: "Calendar",
-        url: "/dashboard/calendar",
-        icon: Calendar,
-      },
-      {
-        id: "kanban",
-        title: "Kanban",
-        url: "/dashboard/kanban",
-        icon: Kanban,
-      },
-      {
-        id: "tasks",
-        title: "Tasks",
-        url: "/dashboard/tasks",
-        icon: CheckSquare,
-      },
-      {
-        id: "invoice",
-        title: "Invoice",
-        url: "/dashboard/invoice",
-        icon: ReceiptText,
-      },
-      {
-        id: "profile",
-        title: "Profile",
-        url: "/dashboard/profile",
-        icon: UserRound,
-        badge: "new",
-      },
+    ],
+  },
+  {
+    id: 5,
+    label: "Users",
+    items: [
       {
         id: "users",
         title: "Users",
@@ -237,6 +187,13 @@ export const sidebarItems: NavGroup[] = [
         title: "Roles",
         url: "/dashboard/roles",
         icon: Lock,
+      },
+      {
+        id: "profile",
+        title: "Profile",
+        url: "/dashboard/profile",
+        icon: UserRound,
+        badge: "new",
       },
       {
         id: "authentication",
@@ -252,7 +209,32 @@ export const sidebarItems: NavGroup[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
+    label: "Reporting & Operations",
+    items: [
+      {
+        id: "analytics",
+        title: "Analytics",
+        url: "/dashboard/analytics",
+        icon: Gauge,
+      },
+      {
+        id: "academy",
+        title: "Academy",
+        url: "/dashboard/academy",
+        icon: GraduationCap,
+      },
+      {
+        id: "patient-monitoring",
+        title: "Patient Monitoring",
+        url: "/dashboard/patient-monitoring",
+        icon: HeartPulse,
+        badge: "new",
+      },
+    ],
+  },
+  {
+    id: 7,
     label: "Legacy",
     items: [
       {
@@ -268,7 +250,7 @@ export const sidebarItems: NavGroup[] = [
     ],
   },
   {
-    id: 6,
+    id: 8,
     label: "Misc",
     items: [
       {

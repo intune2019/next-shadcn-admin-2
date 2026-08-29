@@ -20,13 +20,13 @@ export default function Page() {
         </div>
         <QuickActions showTitle={false} />
         <ProjectsSection />
+        <TasksSection />
         <KpiStrip />
         <OpportunitiesSection />
       </section>
 
       <aside className="flex min-w-0 flex-col gap-4 lg:col-span-3">
         <TaskReminders showUpcomingMeetings={false} />
-        <TasksSection />
         <RecentNotesCard />
         <SummaryCards className="grid-cols-1 md:grid-cols-1 [&>*:last-child]:hidden" />
         <FoldersSection folders={folders} className="grid-cols-1 sm:grid-cols-1 xl:grid-cols-1" />
