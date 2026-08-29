@@ -3,6 +3,7 @@ import { Globe, Search } from "lucide-react";
 import { GlobeCdn } from "@/components/ui/cobe-globe-cdn";
 import { DateRangeCalendarDemo } from "@/components/ui/date-range-calendar";
 import FileUpload from "@/components/ui/file-upload";
+import FileUpload01 from "@/components/ui/file-upload-01";
 import FormLayout02 from "@/components/ui/form-1";
 import InputModel from "@/components/ui/input-model";
 import SignupForm from "@/components/ui/login-signup";
@@ -96,6 +97,16 @@ export default function Page() {
           </CardHeader>
           <CardContent className="flex justify-center p-0">
             <DateRangeCalendarDemo />
+          </CardContent>
+        </Card>
+
+        <Card className="md:col-span-2">
+          <CardHeader>
+            <CardTitle>Project image upload</CardTitle>
+            <CardDescription>Create a project with a lead, image upload, progress indicator, and help tooltip.</CardDescription>
+          </CardHeader>
+          <CardContent className="p-0">
+            <FileUpload01 />
           </CardContent>
         </Card>
       </div>
