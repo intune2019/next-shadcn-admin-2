@@ -1,6 +1,7 @@
 import { Globe, Search } from "lucide-react";
 
 import { GlobeCdn } from "@/components/ui/cobe-globe-cdn";
+import FileUpload from "@/components/ui/file-upload";
 import InputModel from "@/components/ui/input-model";
 import {
   Card,
@@ -47,6 +48,10 @@ export default function Page() {
 
         <div className="md:col-span-2">
           <InputModel />
+        </div>
+
+        <div className="md:col-span-2">
+          <FileUpload />
         </div>
       </div>
     </div>
