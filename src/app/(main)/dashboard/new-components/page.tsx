@@ -3,6 +3,7 @@ import { Globe, Search } from "lucide-react";
 import { GlobeCdn } from "@/components/ui/cobe-globe-cdn";
 import { DateRangeCalendarDemo } from "@/components/ui/date-range-calendar";
 import FileUpload from "@/components/ui/file-upload";
+import GanttDemo from "@/components/ui/gantt-demo";
 import FileUpload01 from "@/components/ui/file-upload-01";
 import FormLayout02 from "@/components/ui/form-1";
 import InputModel from "@/components/ui/input-model";
@@ -107,6 +108,16 @@ export default function Page() {
           </CardHeader>
           <CardContent className="p-0">
             <FileUpload01 />
+          </CardContent>
+        </Card>
+
+        <Card className="md:col-span-2">
+          <CardHeader>
+            <CardTitle>Gantt roadmap</CardTitle>
+            <CardDescription>Drag feature timelines, browse grouped issues, and manage roadmap markers.</CardDescription>
+          </CardHeader>
+          <CardContent className="overflow-hidden p-0">
+            <GanttDemo />
           </CardContent>
         </Card>
       </div>
