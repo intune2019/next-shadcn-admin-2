@@ -4,6 +4,7 @@ import { GlobeCdn } from "@/components/ui/cobe-globe-cdn";
 import FileUpload from "@/components/ui/file-upload";
 import FormLayout02 from "@/components/ui/form-1";
 import InputModel from "@/components/ui/input-model";
+import SignupForm from "@/components/ui/login-signup";
 import {
   Card,
   CardContent,
@@ -57,6 +58,10 @@ export default function Page() {
 
         <div className="md:col-span-2 overflow-hidden rounded-xl border border-border bg-card">
           <FormLayout02 />
+        </div>
+
+        <div className="md:col-span-2 overflow-hidden rounded-xl border border-border bg-card">
+          <SignupForm />
         </div>
       </div>
     </div>
