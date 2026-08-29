@@ -1,6 +1,13 @@
 import { Globe, Search } from "lucide-react";
 
-import { GlobeCdnDemo } from "@/components/ui/cobe-globe-cdn";
+import { GlobeCdn } from "@/components/ui/cobe-globe-cdn";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
 
 export default function Page() {
@@ -11,14 +18,32 @@ export default function Page() {
         <h1 className="text-3xl tracking-tight">New Components</h1>
       </div>
 
-      <InputGroup className="max-w-md">
-        <InputGroupAddon>
-          <Search />
-        </InputGroupAddon>
-        <InputGroupInput aria-label="Search components" placeholder="Search components..." />
-      </InputGroup>
+      <div className="grid gap-4 md:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle>Search input</CardTitle>
+            <CardDescription>A compact input field for filtering component collections.</CardDescription>
+          </CardHeader>
+          <CardContent className="flex min-h-32 items-center">
+            <InputGroup>
+              <InputGroupAddon>
+                <Search />
+              </InputGroupAddon>
+              <InputGroupInput aria-label="Search components" placeholder="Search components..." />
+            </InputGroup>
+          </CardContent>
+        </Card>
 
-      <GlobeCdnDemo />
+        <Card>
+          <CardHeader>
+            <CardTitle>CDN globe</CardTitle>
+            <CardDescription>Interactive globe with live traffic markers and network arcs.</CardDescription>
+          </CardHeader>
+          <CardContent className="flex items-center justify-center bg-white p-4 dark:bg-white">
+            <GlobeCdn className="w-full max-w-sm" />
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }
