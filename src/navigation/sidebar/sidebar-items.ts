@@ -86,6 +86,12 @@ export const sidebarItems: NavGroup[] = [
     label: "PM / Project Work",
     items: [
       {
+        id: "pm-dashboard",
+        title: "Dashboard",
+        url: "/dashboard/pm",
+        icon: LayoutDashboard,
+      },
+      {
         id: "kanban",
         title: "Project Board",
         url: "/dashboard/kanban",
@@ -109,6 +115,12 @@ export const sidebarItems: NavGroup[] = [
     id: 3,
     label: "Field Work",
     items: [
+      {
+        id: "field-work-dashboard",
+        title: "Dashboard",
+        url: "/dashboard/field-work",
+        icon: Forklift,
+      },
       {
         id: "logistics",
         title: "Logistics",
@@ -134,6 +146,12 @@ export const sidebarItems: NavGroup[] = [
     id: 4,
     label: "CRM & Accounting",
     items: [
+      {
+        id: "crm-accounting-dashboard",
+        title: "Dashboard",
+        url: "/dashboard/crm-accounting",
+        icon: ChartBar,
+      },
       {
         id: "crm",
         title: "CRM",
@@ -177,6 +195,12 @@ export const sidebarItems: NavGroup[] = [
     label: "Users",
     items: [
       {
+        id: "user-management-dashboard",
+        title: "Dashboard",
+        url: "/dashboard/user-management",
+        icon: Users,
+      },
+      {
         id: "users",
         title: "Users",
         url: "/dashboard/users",
@@ -212,6 +236,12 @@ export const sidebarItems: NavGroup[] = [
     id: 6,
     label: "Reporting & Operations",
     items: [
+      {
+        id: "reporting-dashboard",
+        title: "Dashboard",
+        url: "/dashboard/reporting",
+        icon: Gauge,
+      },
       {
         id: "analytics",
         title: "Analytics",
