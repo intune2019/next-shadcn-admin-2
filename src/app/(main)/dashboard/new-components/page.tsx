@@ -1,13 +1,17 @@
 import { Globe, Search } from "lucide-react";
 
 import { GlobeCdn } from "@/components/ui/cobe-globe-cdn";
+import BasicSteps from "@/components/ui/basic-steps";
 import { DateRangeCalendarDemo } from "@/components/ui/date-range-calendar";
+import { DropdownNavigationDemo } from "@/components/ui/dropdown-navigation-demo";
 import FileUpload from "@/components/ui/file-upload";
 import GanttDemo from "@/components/ui/gantt-demo";
 import FileUpload01 from "@/components/ui/file-upload-01";
 import FormLayout02 from "@/components/ui/form-1";
 import InputModel from "@/components/ui/input-model";
+import { OrderTrackingDemo } from "@/components/ui/order-tracking-demo";
 import SignupForm from "@/components/ui/login-signup";
+import StepsWithNavigation from "@/components/ui/steps-with-navigation";
 import {
   Card,
   CardContent,
@@ -118,6 +122,46 @@ export default function Page() {
           </CardHeader>
           <CardContent className="overflow-hidden p-0">
             <GanttDemo />
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Order tracking</CardTitle>
+            <CardDescription>Vertical delivery progress indicator with completed and pending steps.</CardDescription>
+          </CardHeader>
+          <CardContent className="flex justify-center">
+            <OrderTrackingDemo />
+          </CardContent>
+        </Card>
+
+        <Card className="md:col-span-2">
+          <CardHeader>
+            <CardTitle>Dropdown navigation</CardTitle>
+            <CardDescription>Hover navigation with animated menu transitions and grouped links.</CardDescription>
+          </CardHeader>
+          <CardContent className="overflow-hidden p-0">
+            <DropdownNavigationDemo />
+          </CardContent>
+        </Card>
+
+        <Card className="md:col-span-2">
+          <CardHeader>
+            <CardTitle>Basic steps</CardTitle>
+            <CardDescription>Numbered progress indicator for a simple multi-step flow.</CardDescription>
+          </CardHeader>
+          <CardContent className="p-0">
+            <BasicSteps />
+          </CardContent>
+        </Card>
+
+        <Card className="md:col-span-2">
+          <CardHeader>
+            <CardTitle>Steps with navigation</CardTitle>
+            <CardDescription>Interactive step progress indicator with previous and next controls.</CardDescription>
+          </CardHeader>
+          <CardContent className="p-0">
+            <StepsWithNavigation />
           </CardContent>
         </Card>
       </div>
