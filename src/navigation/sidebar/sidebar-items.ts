@@ -83,7 +83,7 @@ export const sidebarItems: NavGroup[] = [
   },
   {
     id: 2,
-    label: "PM / Project Work",
+    label: "PM",
     items: [
       {
         id: "pm-dashboard",
@@ -113,7 +113,7 @@ export const sidebarItems: NavGroup[] = [
   },
   {
     id: 3,
-    label: "Field Work",
+    label: "OPS",
     items: [
       {
         id: "field-work-dashboard",
@@ -144,7 +144,7 @@ export const sidebarItems: NavGroup[] = [
   },
   {
     id: 4,
-    label: "CRM & Accounting",
+    label: "CRM",
     items: [
       {
         id: "crm-accounting-dashboard",
@@ -192,7 +192,7 @@ export const sidebarItems: NavGroup[] = [
   },
   {
     id: 5,
-    label: "Users",
+    label: "USR",
     items: [
       {
         id: "user-management-dashboard",
@@ -234,7 +234,7 @@ export const sidebarItems: NavGroup[] = [
   },
   {
     id: 6,
-    label: "Reporting & Operations",
+    label: "Admin",
     items: [
       {
         id: "reporting-dashboard",
