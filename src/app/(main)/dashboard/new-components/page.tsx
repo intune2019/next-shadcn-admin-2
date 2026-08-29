@@ -1,6 +1,7 @@
 import { Globe, Search } from "lucide-react";
 
 import { GlobeCdn } from "@/components/ui/cobe-globe-cdn";
+import { DateRangeCalendarDemo } from "@/components/ui/date-range-calendar";
 import FileUpload from "@/components/ui/file-upload";
 import FormLayout02 from "@/components/ui/form-1";
 import InputModel from "@/components/ui/input-model";
@@ -48,21 +49,55 @@ export default function Page() {
           </CardContent>
         </Card>
 
-        <div className="md:col-span-2">
-          <InputModel />
-        </div>
+        <Card className="md:col-span-2">
+          <CardHeader>
+            <CardTitle>Audio show creator</CardTitle>
+            <CardDescription>Modal-style content creation flow with upload, URL, and voice controls.</CardDescription>
+          </CardHeader>
+          <CardContent className="p-0">
+            <InputModel />
+          </CardContent>
+        </Card>
 
-        <div className="md:col-span-2">
-          <FileUpload />
-        </div>
+        <Card className="md:col-span-2">
+          <CardHeader>
+            <CardTitle>File upload</CardTitle>
+            <CardDescription>Drag-and-drop uploader with selected file details and removal controls.</CardDescription>
+          </CardHeader>
+          <CardContent className="p-0">
+            <FileUpload />
+          </CardContent>
+        </Card>
 
-        <div className="md:col-span-2 overflow-hidden rounded-xl border border-border bg-card">
-          <FormLayout02 />
-        </div>
+        <Card className="md:col-span-2">
+          <CardHeader>
+            <CardTitle>Settings form</CardTitle>
+            <CardDescription>Responsive account, workspace, and notification settings form.</CardDescription>
+          </CardHeader>
+          <CardContent className="p-0">
+            <FormLayout02 />
+          </CardContent>
+        </Card>
 
-        <div className="md:col-span-2 overflow-hidden rounded-xl border border-border bg-card">
-          <SignupForm />
-        </div>
+        <Card className="md:col-span-2">
+          <CardHeader>
+            <CardTitle>Signup form</CardTitle>
+            <CardDescription>Account creation form with role selection and password visibility control.</CardDescription>
+          </CardHeader>
+          <CardContent className="p-0">
+            <SignupForm />
+          </CardContent>
+        </Card>
+
+        <Card className="md:col-span-2">
+          <CardHeader>
+            <CardTitle>Date range picker</CardTitle>
+            <CardDescription>Interactive calendar with date range selection, time inputs, and timezone controls.</CardDescription>
+          </CardHeader>
+          <CardContent className="flex justify-center p-0">
+            <DateRangeCalendarDemo />
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
