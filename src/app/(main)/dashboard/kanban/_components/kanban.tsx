@@ -166,7 +166,7 @@ export function Kanban({ initialBoard }: KanbanProps) {
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <Bot />
-                  Create automation
+                  New automation
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

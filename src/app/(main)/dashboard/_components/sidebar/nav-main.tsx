@@ -1,5 +1,7 @@
 "use client";
 
+import * as React from "react";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -12,6 +14,7 @@ import {
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
+  DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
@@ -107,13 +110,67 @@ export function NavMain({ items }: NavMainProps) {
         <SidebarGroupContent className="flex flex-col gap-2">
           <SidebarMenu>
             <SidebarMenuItem className="flex items-center gap-2">
-              <SidebarMenuButton
-                tooltip="Quick Create"
-                className="min-w-8 bg-primary text-primary-foreground duration-200 ease-linear hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground"
-              >
-                <PlusCircleIcon />
-                <span>Quick Create</span>
-              </SidebarMenuButton>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <SidebarMenuButton
+                    tooltip="Open Module"
+                    className="min-w-8 bg-primary text-primary-foreground duration-200 ease-linear hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground"
+                  >
+                    <PlusCircleIcon />
+                    <span>Open Module</span>
+                  </SidebarMenuButton>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent side="right" align="start" sideOffset={12} className="w-64">
+                  {items.map((group) => (
+                    <React.Fragment key={group.id}>
+                      {group.label && <DropdownMenuLabel>{group.label}</DropdownMenuLabel>}
+                      <DropdownMenuGroup>
+                        {group.items.map((item) => {
+                          const Icon = item.icon;
+
+                          if (item.subItems) {
+                            return item.subItems.map((subItem) => {
+                              const SubIcon = subItem.icon ?? Icon;
+
+                              return (
+                                <DropdownMenuItem key={subItem.id} asChild disabled={subItem.disabled}>
+                                  <Link
+                                    prefetch={false}
+                                    href={subItem.url}
+                                    target={subItem.newTab ? "_blank" : undefined}
+                                    rel={subItem.newTab ? "noreferrer" : undefined}
+                                    aria-current={path === subItem.url ? "page" : undefined}
+                                    className="flex items-center gap-2"
+                                  >
+                                    {SubIcon && <SubIcon />}
+                                    <span>{subItem.title}</span>
+                                  </Link>
+                                </DropdownMenuItem>
+                              );
+                            });
+                          }
+
+                          return (
+                            <DropdownMenuItem key={item.id} asChild disabled={item.disabled}>
+                              <Link
+                                prefetch={false}
+                                href={item.url}
+                                target={item.newTab ? "_blank" : undefined}
+                                rel={item.newTab ? "noreferrer" : undefined}
+                                aria-current={path === item.url ? "page" : undefined}
+                                className="flex items-center gap-2"
+                              >
+                                {Icon && <Icon />}
+                                <span>{item.title}</span>
+                              </Link>
+                            </DropdownMenuItem>
+                          );
+                        })}
+                      </DropdownMenuGroup>
+                    </React.Fragment>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
               <Button
                 size="icon"
                 className="h-9 w-9 shrink-0 group-data-[collapsible=icon]:opacity-0"

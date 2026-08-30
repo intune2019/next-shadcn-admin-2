@@ -83,7 +83,7 @@ export function Roles({ roles }: { roles: Role[] }) {
             <FileUp data-icon="inline-start" />
             Import JSON
           </Button>
-          <Button size="sm">Create role</Button>
+          <Button size="sm">New role</Button>
         </div>
       </div>
 
