@@ -14,7 +14,7 @@ type Props = {
       items: {
         label: string;
         description: string;
-        icon: React.ElementType;
+        icon: React.ComponentType<{ className?: string }>;
       }[];
     }[];
     link?: string;
