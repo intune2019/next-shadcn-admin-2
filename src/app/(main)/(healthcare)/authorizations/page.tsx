@@ -1,1 +1,6 @@
-export { default } from "@/app/(main)/dashboard/roles/page";
+import { AuthorizationsWorkspace } from "./_components/authorizations-workspace";
+import { authorizations } from "./_components/data";
+
+export default function Page() {
+  return <AuthorizationsWorkspace authorizations={authorizations} />;
+}
