@@ -1,13 +1,31 @@
+"use client";
+
 import Link from "next/link";
 
 import { ArrowRight, ArrowUpRight, Check, Command, Layers3, LineChart, ShieldCheck } from "lucide-react";
+import { Bar, BarChart } from "recharts";
 
 import { ThemeSwitcher } from "@/app/(main)/dashboard/_components/header/theme-switcher";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { type ChartConfig, ChartContainer } from "@/components/ui/chart";
 
 import { Component as NetworkGlobe } from "./network-globe";
+
+const networkChartData = [
+  { region: "AMER", uptime: 99.99 },
+  { region: "EMEA", uptime: 99.97 },
+  { region: "APAC", uptime: 99.99 },
+  { region: "LATAM", uptime: 99.95 },
+];
+
+const networkChartConfig = {
+  uptime: {
+    label: "Uptime",
+    color: "var(--chart-1)",
+  },
+} satisfies ChartConfig;
 
 export default function Home() {
   return (
@@ -79,23 +97,25 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative min-h-[430px] overflow-hidden rounded-xl border border-border/60 bg-background shadow-lg">
+          <div className="relative -mt-[121px] -mr-[86px] -mb-[130px] -ml-[5px] flex min-h-[430px] flex-col flex-wrap items-stretch justify-center overflow-hidden rounded-xl border border-border/60 bg-background pr-[111px] pb-[177px] pl-[15px] shadow-lg">
             <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-primary/10" />
-            <div className="absolute top-6 left-6 z-10">
-              <Badge variant="secondary" className="gap-2">
-                <span className="size-1.5 rounded-full bg-primary" />
-                All systems operational
-              </Badge>
-            </div>
+            <div className="absolute top-6 left-6 z-10" />
             <div className="absolute inset-y-0 right-[-14%] flex w-[78%] items-center justify-center">
-              <NetworkGlobe size={520} className="max-w-none" />
+              <NetworkGlobe size={640} className="mx-auto max-w-none" />
             </div>
-            <div className="absolute right-6 bottom-6 left-6 z-10 flex items-end justify-between gap-4 border-border/60 border-t pt-4">
-              <div>
-                <p className="font-medium text-sm">Global edge network</p>
-                <p className="mt-1 text-muted-foreground text-xs">Connected intelligence across every care setting</p>
+            <div className="absolute bottom-6 left-6 z-10 w-64 max-w-[calc(100%-2rem)] rounded-lg border border-border/60 bg-background/85 p-3 shadow-lg backdrop-blur">
+              <div className="flex items-end justify-between gap-3">
+                <div>
+                  <p className="font-medium text-sm">Network uptime</p>
+                  <p className="mt-1 text-muted-foreground text-xs">Live regional performance</p>
+                </div>
+                <p className="font-semibold text-lg tracking-tight">99.99%</p>
               </div>
-              <Badge variant="outline">150+ nodes</Badge>
+              <ChartContainer config={networkChartConfig} className="mt-3 aspect-auto h-20 w-full">
+                <BarChart data={networkChartData} margin={{ top: 4, right: 4, left: 4, bottom: 0 }}>
+                  <Bar dataKey="uptime" fill="var(--color-uptime)" radius={3} />
+                </BarChart>
+              </ChartContainer>
             </div>
           </div>
         </div>
