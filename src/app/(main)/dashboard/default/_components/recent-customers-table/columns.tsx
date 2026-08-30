@@ -12,13 +12,13 @@ import type { RecentCustomerRow } from "./schema";
 
 function billingIcon(billing: string) {
   switch (billing) {
-    case "Paid":
+    case "Verified":
       return <CircleCheckIcon className="fill-green-500 stroke-primary-foreground dark:fill-green-600" />;
     case "Pending":
       return <LoaderIcon />;
-    case "Overdue":
+    case "Needs review":
       return <CircleAlertIcon className="text-amber-600 dark:text-amber-500" />;
-    case "Trial":
+    case "Not on file":
       return <Clock3Icon className="text-muted-foreground" />;
     default:
       return null;
@@ -41,7 +41,7 @@ export const recentCustomersColumns: ColumnDef<DataTableFeatures, RecentCustomer
             <Checkbox
               checked={checked}
               onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-              aria-label="Select all customers on this page"
+              aria-label="Select all patients on this page"
             />
           )}
         </Subscribe>
@@ -64,7 +64,7 @@ export const recentCustomersColumns: ColumnDef<DataTableFeatures, RecentCustomer
   },
   {
     accessorKey: "name",
-    header: "Customer",
+    header: "Patient",
     cell: ({ row }) => (
       <div className="flex items-center gap-2">
         <span className="flex size-8 items-center justify-center rounded-md border bg-muted">
@@ -100,7 +100,7 @@ export const recentCustomersColumns: ColumnDef<DataTableFeatures, RecentCustomer
   },
   {
     accessorKey: "billing",
-    header: "Billing",
+    header: "Coverage",
     filterFn: "equalsString",
     cell: ({ row }) => (
       <Badge variant="outline" className="px-1.5 text-muted-foreground">
@@ -111,7 +111,7 @@ export const recentCustomersColumns: ColumnDef<DataTableFeatures, RecentCustomer
   },
   {
     accessorKey: "plan",
-    header: "Plan",
+    header: "Care team",
     cell: ({ row }) => <span className="text-sm">{row.original.plan}</span>,
   },
   {
@@ -128,7 +128,7 @@ export const recentCustomersColumns: ColumnDef<DataTableFeatures, RecentCustomer
   },
   {
     accessorKey: "joined",
-    header: "Joined",
+    header: "Last visit",
     cell: ({ row }) => {
       const baseDate = parseISO(row.original.joined);
       const joinedAt = addMinutes(baseDate, 9 * 60 + (Number(row.original.id) % 12) * 17);

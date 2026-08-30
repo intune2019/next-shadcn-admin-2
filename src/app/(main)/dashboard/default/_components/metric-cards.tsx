@@ -13,17 +13,17 @@ export function MetricCards() {
               <DollarSign className="size-4" />
             </div>
           </CardTitle>
-          <CardDescription>Total Revenue</CardDescription>
+          <CardDescription>Net collections</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-1">
           <div className="flex flex-wrap items-center gap-2">
-            <div className="font-medium text-3xl tabular-nums leading-none tracking-tight">$1,250.00</div>
+            <div className="font-medium text-3xl tabular-nums leading-none tracking-tight">$1.25M</div>
             <Badge>
               <TrendingUp className="size-3" />
               +12.5%
             </Badge>
           </div>
-          <p className="text-muted-foreground text-sm">Visitors for the last 6 months</p>
+          <p className="text-muted-foreground text-sm">Month to date across all practices</p>
         </CardContent>
       </Card>
 
@@ -34,7 +34,7 @@ export function MetricCards() {
               <UserPlus className="size-4" />
             </div>
           </CardTitle>
-          <CardDescription>New Customers</CardDescription>
+          <CardDescription>Patients today</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-1">
           <div className="flex flex-wrap items-center gap-2">
@@ -44,7 +44,7 @@ export function MetricCards() {
               -20%
             </Badge>
           </div>
-          <p className="text-muted-foreground text-sm">Acquisition needs attention</p>
+          <p className="text-muted-foreground text-sm">64 appointments need rooming</p>
         </CardContent>
       </Card>
 
@@ -55,17 +55,17 @@ export function MetricCards() {
               <Users className="size-4" />
             </div>
           </CardTitle>
-          <CardDescription>Active Accounts</CardDescription>
+          <CardDescription>Active providers</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-1">
           <div className="flex flex-wrap items-center gap-2">
-            <div className="font-medium text-3xl tabular-nums leading-none tracking-tight">45,678</div>
+            <div className="font-medium text-3xl tabular-nums leading-none tracking-tight">45</div>
             <Badge>
               <TrendingUp className="size-3" />
               +12.5%
             </Badge>
           </div>
-          <p className="text-muted-foreground text-sm">Engagement exceeds targets</p>
+          <p className="text-muted-foreground text-sm">Across 4 care locations</p>
         </CardContent>
       </Card>
 
@@ -76,17 +76,17 @@ export function MetricCards() {
               <Waves className="size-4" />
             </div>
           </CardTitle>
-          <CardDescription>Growth Rate</CardDescription>
+          <CardDescription>Open work queues</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-1">
           <div className="flex flex-wrap items-center gap-2">
-            <div className="font-medium text-3xl tabular-nums leading-none tracking-tight">4.5%</div>
+            <div className="font-medium text-3xl tabular-nums leading-none tracking-tight">18</div>
             <Badge>
               <TrendingUp className="size-3" />
               +4.5%
             </Badge>
           </div>
-          <p className="text-muted-foreground text-sm">Meets growth projections</p>
+          <p className="text-muted-foreground text-sm">6 items need clinical review</p>
         </CardContent>
       </Card>
     </div>

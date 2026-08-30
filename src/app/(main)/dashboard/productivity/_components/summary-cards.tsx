@@ -4,9 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 const summaryCards = [
-  { title: "Today", value: "4", description: "tasks scheduled", icon: Clock3 },
-  { title: "This Week", value: "68%", description: "progress", icon: TrendingUp },
-  { title: "Focus", value: "Deep Work", description: "2 hours remaining", icon: Focus },
+  { title: "Today", value: "64", description: "visits scheduled", icon: Clock3 },
+  { title: "Capacity", value: "68%", description: "booked this week", icon: TrendingUp },
+  { title: "Review", value: "6", description: "clinical items", icon: Focus },
 ] as const;
 
 export function SummaryCards({ className }: { className?: string } = {}) {

@@ -74,12 +74,12 @@ export function TaskReminders({ showUpcomingMeetings = true }: { showUpcomingMee
 
       <Card className={showUpcomingMeetings ? "xl:col-span-4" : "xl:col-span-12"}>
         <CardHeader>
-          <CardTitle>Monthly Proposal Goal</CardTitle>
+          <CardTitle>Monthly referral target</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col gap-1">
           <div className="flex items-end justify-between gap-3">
             <div className="font-medium text-2xl tabular-nums leading-none">
-              {proposalSent} <span className="font-normal text-base text-muted-foreground">sent</span>
+              {proposalSent} <span className="font-normal text-base text-muted-foreground">routed</span>
             </div>
             <div className="text-muted-foreground text-sm tabular-nums">{proposalGoal} target</div>
           </div>
@@ -96,7 +96,7 @@ export function TaskReminders({ showUpcomingMeetings = true }: { showUpcomingMee
             ))}
           </div>
           <p className="text-muted-foreground text-sm">
-            {proposalProgressPercentage}% of this month&apos;s proposal target reached.
+            {proposalProgressPercentage}% of this month&apos;s referral target reached.
           </p>
         </CardContent>
       </Card>

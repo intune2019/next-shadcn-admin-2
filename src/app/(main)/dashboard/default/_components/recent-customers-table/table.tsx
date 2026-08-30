@@ -39,16 +39,16 @@ import type { RecentCustomerRow } from "./schema";
 
 const statusOptions = [
   { value: "all", label: "All" },
-  { value: "Subscribed", label: "Subscribed" },
+  { value: "Active", label: "Active" },
   { value: "Inactive", label: "Inactive" },
-  { value: "Unsubscribed", label: "Unsubscribed" },
+  { value: "Pending intake", label: "Pending intake" },
 ] as const;
 const billingOptions = [
   { value: "all", label: "All" },
-  { value: "Paid", label: "Paid" },
-  { value: "Pending", label: "Pending" },
-  { value: "Overdue", label: "Overdue" },
-  { value: "Trial", label: "Trial" },
+  { value: "Verified", label: "Verified" },
+  { value: "Pending", label: "Pending review" },
+  { value: "Needs review", label: "Needs review" },
+  { value: "Not on file", label: "Not on file" },
 ] as const;
 const joinedDateOptions = [
   { value: "all", label: "All time" },
@@ -124,7 +124,7 @@ export function RecentCustomersTable({ data }: { data: RecentCustomerRow[] }) {
             <Search className="pointer-events-none absolute top-1/2 left-2.5 size-4 -translate-y-1/2 text-muted-foreground" />
             <Input
               className="h-7 rounded-[min(var(--radius-md),12px)] pl-8"
-              placeholder="Search customers..."
+              placeholder="Search patients..."
               value={searchQuery}
               onChange={(event) => {
                 table.getColumn("search")?.setFilterValue(event.target.value || undefined);
@@ -159,7 +159,7 @@ export function RecentCustomersTable({ data }: { data: RecentCustomerRow[] }) {
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="sm">
                 <CalendarDays />
-                Joined date
+                Last visit
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-40" align="start">
@@ -184,7 +184,7 @@ export function RecentCustomersTable({ data }: { data: RecentCustomerRow[] }) {
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="sm">
                 <CreditCard />
-                Billing
+                Coverage
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">

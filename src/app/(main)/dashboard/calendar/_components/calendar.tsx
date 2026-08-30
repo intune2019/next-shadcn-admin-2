@@ -25,11 +25,11 @@ const views = [
 ];
 
 const calendars = [
-  { key: "all", label: "All calendars" },
-  { key: "work", label: "Work" },
-  { key: "personal", label: "Personal" },
-  { key: "team", label: "Team" },
-  { key: "focus", label: "Focus time" },
+  { key: "all", label: "All providers" },
+  { key: "work", label: "Primary care" },
+  { key: "personal", label: "Specialty care" },
+  { key: "team", label: "Care team" },
+  { key: "focus", label: "Blocked time" },
 ];
 
 const plugins = [dayGridPlugin, timeGridPlugin, listPlugin, interactionPlugin, multiMonthPlugin];
@@ -55,7 +55,7 @@ export function Calendar() {
         <div className="flex min-w-0 shrink-0 flex-col gap-1">
           <div className="font-medium text-lg leading-none">{title}</div>
           <p className="text-muted-foreground text-sm">
-            {days} days - {eventCount} events
+            {days} days - {eventCount} appointments
           </p>
         </div>
 
@@ -107,7 +107,7 @@ export function Calendar() {
           </Select>
           <Button>
             <Plus />
-            Add event
+            Add appointment
           </Button>
         </div>
       </div>

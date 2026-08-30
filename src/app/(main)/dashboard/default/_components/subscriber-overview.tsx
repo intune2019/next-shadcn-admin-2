@@ -15,12 +15,12 @@ export function SubscriberOverview() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="leading-none">18,426 Customers</CardTitle>
-        <CardDescription>Recent customer records with plan, billing, status, and signup activity.</CardDescription>
+        <CardTitle className="leading-none">18,426 Patients</CardTitle>
+        <CardDescription>Recent patient records with care team, coverage, status, and last visit.</CardDescription>
         <CardAction>
           <Button variant="outline" size="sm">
             <Download />
-            Export
+            Export registry
           </Button>
         </CardAction>
       </CardHeader>

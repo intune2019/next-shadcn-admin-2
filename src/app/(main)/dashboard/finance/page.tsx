@@ -19,7 +19,7 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-4">
       <div className="space-y-1">
-        <h1 className="text-3xl tracking-tight">Personal Finances</h1>
+        <h1 className="text-3xl tracking-tight">Revenue cycle</h1>
         <p className="text-muted-foreground text-sm">{formattedDate}</p>
       </div>
 
@@ -27,8 +27,8 @@ export default function Page() {
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
           <TabsList variant="line">
             <TabsTrigger value="30-days">Dashboard</TabsTrigger>
-            <TabsTrigger value="12-months">Accounts</TabsTrigger>
-            <TabsTrigger value="custom">Transactions</TabsTrigger>
+            <TabsTrigger value="12-months">Claims</TabsTrigger>
+            <TabsTrigger value="custom">Patient balances</TabsTrigger>
           </TabsList>
 
           <div className="flex flex-wrap items-center gap-3">
@@ -83,13 +83,13 @@ export default function Page() {
 
         <TabsContent value="12-months">
           <div className="flex h-64 items-center justify-center rounded-xl border border-border border-dashed text-muted-foreground">
-            Accounts view coming soon.
+            Claims workspace coming soon.
           </div>
         </TabsContent>
 
         <TabsContent value="custom">
           <div className="flex h-64 items-center justify-center rounded-xl border border-border border-dashed text-muted-foreground">
-            Transactions view coming soon.
+            Patient balances workspace coming soon.
           </div>
         </TabsContent>
       </Tabs>

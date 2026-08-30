@@ -10,12 +10,12 @@ export function FinanceNotification() {
         <TrendingUp />
       </ItemMedia>
       <ItemContent>
-        <ItemTitle>Credit score updated</ItemTitle>
-        <ItemDescription>Your score increased by 14 points to 782.</ItemDescription>
+        <ItemTitle>Claim batch cleared</ItemTitle>
+        <ItemDescription>12 claims passed edits and are ready for submission.</ItemDescription>
       </ItemContent>
       <ItemActions>
         <Button size="sm" variant="outline">
-          View details
+          Review batch
         </Button>
       </ItemActions>
     </Item>
