@@ -7,6 +7,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
+import { Component as NetworkGlobe } from "./network-globe";
+
 export default function Home() {
   return (
     <main className="min-h-svh overflow-hidden bg-background text-foreground">
@@ -77,55 +79,25 @@ export default function Home() {
             </div>
           </div>
 
-          <Card className="relative overflow-hidden border-primary/15 bg-linear-to-br from-primary/10 via-card to-card shadow-lg">
-            <div className="pointer-events-none absolute -top-24 -right-24 size-56 rounded-full bg-primary/10 blur-3xl" />
-            <CardHeader className="relative border-border/60 border-b pb-4">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <CardDescription>H.E.O.S. Command Center</CardDescription>
-                  <CardTitle className="mt-1 text-xl">Every outcome in view</CardTitle>
-                </div>
-                <Badge variant="secondary">Live signal</Badge>
+          <div className="relative min-h-[430px] overflow-hidden rounded-xl border border-border/60 bg-background shadow-lg">
+            <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-primary/10" />
+            <div className="absolute top-6 left-6 z-10">
+              <Badge variant="secondary" className="gap-2">
+                <span className="size-1.5 rounded-full bg-primary" />
+                All systems operational
+              </Badge>
+            </div>
+            <div className="absolute inset-y-0 right-[-14%] flex w-[78%] items-center justify-center">
+              <NetworkGlobe size={520} className="max-w-none" />
+            </div>
+            <div className="absolute right-6 bottom-6 left-6 z-10 flex items-end justify-between gap-4 border-border/60 border-t pt-4">
+              <div>
+                <p className="font-medium text-sm">Global edge network</p>
+                <p className="mt-1 text-muted-foreground text-xs">Connected intelligence across every care setting</p>
               </div>
-            </CardHeader>
-            <CardContent className="relative space-y-5 pt-5">
-              <div className="grid grid-cols-3 gap-3">
-                <div className="rounded-lg border bg-background/70 p-3">
-                  <p className="text-muted-foreground text-xs">30-day readmissions</p>
-                  <p className="mt-2 font-medium text-2xl tracking-tight">6.2%</p>
-                  <p className="mt-1 text-muted-foreground text-xs">-1.8 pts</p>
-                </div>
-                <div className="rounded-lg border bg-background/70 p-3">
-                  <p className="text-muted-foreground text-xs">Clean claim rate</p>
-                  <p className="mt-2 font-medium text-2xl tracking-tight">98.4%</p>
-                  <p className="mt-1 text-muted-foreground text-xs">+3.1 pts</p>
-                </div>
-                <div className="rounded-lg border bg-background/70 p-3">
-                  <p className="text-muted-foreground text-xs">Documentation time</p>
-                  <p className="mt-2 font-medium text-2xl tracking-tight">2 min</p>
-                  <p className="mt-1 text-muted-foreground text-xs">-41 min</p>
-                </div>
-              </div>
-
-              <div className="rounded-lg border bg-background/70 p-4">
-                <div className="flex items-center justify-between gap-4">
-                  <div>
-                    <p className="font-medium text-sm">Operational intelligence</p>
-                    <p className="mt-1 text-muted-foreground text-xs">Real-time system view</p>
-                  </div>
-                  <LineChart className="size-4 text-muted-foreground" />
-                </div>
-                <div className="mt-5 flex h-24 items-end gap-2">
-                  <div className="h-10 flex-1 rounded-sm bg-primary/25" />
-                  <div className="h-14 flex-1 rounded-sm bg-primary/35" />
-                  <div className="h-12 flex-1 rounded-sm bg-primary/45" />
-                  <div className="h-20 flex-1 rounded-sm bg-primary/60" />
-                  <div className="h-16 flex-1 rounded-sm bg-primary/70" />
-                  <div className="h-24 flex-1 rounded-sm bg-primary" />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+              <Badge variant="outline">150+ nodes</Badge>
+            </div>
+          </div>
         </div>
       </section>
 
