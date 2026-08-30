@@ -4,18 +4,13 @@ STRICT SCOPE:
 - You may ONLY clone, duplicate, rearrange, and restructure components that
 - WHEN PROVIDED .tsx or OTHER FILE for NEW component ADD THE COMPONENT to the STRUCTURE AS REQUESTED 
   already exist in the provided template/codebase.
-- You are FORBIDDEN from creating any new component that does not already
-  exist in the source template.
-- You are FORBIDDEN from generating placeholder components, filler
-  components, or "helper" components not present in the original.
-- You are FORBIDDEN from modifying business logic, state management,
-  hooks, API calls, or data-fetching code inside any component.
-- You are FORBIDDEN from renaming props, exports, file paths, or component
-  interfaces unless explicitly instructed.
-- You are FORBIDDEN from introducing new npm packages, imports, or
-  dependencies not already present in the template.
-- You are FORBIDDEN from deleting existing components, files, or code
-  unless explicitly instructed to remove that exact component.
+- You are FORBIDDEN from creating anything NOT APPROVED that does not already exist in the source template. OR IS REQUESTED 
+- You are to ONLY CREATE and Generating placeholder components, filler components, or "helper" components not present in the original WHEN ASKED AND EXACTLY AS PERMITTED
+- You are FORBIDDEN from modifying business logic, state management THAT IS NOT RELATED TO "HEOS or HEALTH CARE" or "IN.TUNE AND ASSOCIATES INC" UNLESS EXPLICITLY REQUESTED.
+-  hooks, API calls, or data-fetching code inside any component.ONLY AS NEEDED FOR THE PROVIDED HEOS AND INTUNE WORLDS
+- You are to FOLLOW renaming props, exports, file paths, or component interfaces as explicitly instructed.
+- You are to only create from introdced  and provided new npm packages, imports, or  dependencies not already present in the template.
+- You are FORBIDDEN from deleting existing components, files, or code  unless explicitly instructed to remove that exact component.
 
 ALLOWED ACTIONS ONLY:
 1. Clone an existing component (exact copy, same props/interface).
@@ -26,14 +21,20 @@ ALLOWED ACTIONS ONLY:
    NEVER new CSS logic, NEVER new Tailwind classes not already used
    in the template.
 5. Duplicate a component tree N times when explicitly asked.
+6. relable reorganize and construct for the use case DO NOT REINVENT simply REPURPOSE ALL COMPONENT as NEEDED
 
-IF A REQUEST REQUIRES A COMPONENT THAT DOES NOT EXIST IN THE TEMPLATE:
-- STOP.
-- Do NOT invent one.
-- Respond with: "No matching component exists in the provided template
-  for this request. Available components are: [list]. Please specify
-  which existing component to clone/adapt, or provide the new component
-  code yourself."
+WE ARE USING THESE COMPONENTS TO BUILD AN ERP + ECOSYSTEM - I WILL PROVIDE DIRECTION YOU WILL DELiver AS AND ONLY AS REQUESTED.
+
+IF YOU DO NOT UNDERSTAND THEN:
+1. ask for sample and screen shots or guidance
+
+
+east to west build out ! DO NOT LEAVE EMPLTY UI DEAD SPACES everytting must LOOK and FEEL to scope for every HEOS and INTUNE REUEST.
+
+SUPABASE migration is for INTUNE only - YOU WILL CREATE SOMETHNG OF EQUAL TO OR GREATER UI UX FUNCTION AND LOGIC AS FRAPPE/ERPNEXT and BETTER THAN ODOO and BETTER THAN SALES FORCE
+
+- DO NOT SCOPE DRIFT
+
 
 VALIDATION BEFORE EVERY CHANGE:
 - Diff the proposed output against the original component tree.
