@@ -16,15 +16,15 @@ export default function Home() {
             <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
               <Command className="size-4" />
             </span>
-            <span className="font-heading font-semibold tracking-tight">Studio Admin</span>
+            <span className="font-heading font-semibold tracking-tight">H.E.O.S.</span>
           </Link>
 
           <nav className="hidden items-center gap-6 text-muted-foreground text-sm md:flex">
             <Link className="transition-colors hover:text-foreground" href="#capabilities">
-              Capabilities
+              Platform
             </Link>
             <Link className="transition-colors hover:text-foreground" href="#workflow">
-              Workflow
+              Security
             </Link>
           </nav>
 
@@ -32,7 +32,7 @@ export default function Home() {
             <ThemeSwitcher />
             <Button asChild size="sm">
               <Link href="/dashboard/default">
-                Open dashboard
+                Request a demo
                 <ArrowUpRight />
               </Link>
             </Button>
@@ -44,34 +44,41 @@ export default function Home() {
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-16 md:py-24 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:gap-20 lg:px-8 lg:py-28">
           <div className="max-w-2xl">
             <Badge variant="outline" className="gap-2 px-3 py-1">
-              <span className="size-1.5 rounded-full bg-primary" />A calmer way to run the workday
+              <span className="size-1.5 rounded-full bg-primary" />
+              The Healthcare Operating System
             </Badge>
             <h1 className="mt-6 max-w-xl font-heading font-semibold text-4xl tracking-tight sm:text-5xl lg:text-6xl">
-              See the work clearly. Move it forward.
+              One Record
+              <br />
+              One Intelligence Layer
+              <br />
+              Every Part of Healthcare
+              <br />
+              <span className="text-primary">UNIFIED</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-muted-foreground leading-8">
-              Studio Admin brings your most important activity, customer signals, and team priorities into one focused
-              workspace.
+              H.E.O.S. is the central nervous system for healthcare organizations of every size—replacing your EHR,
+              practice management, and revenue cycle tools with one autonomous, predictive platform.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg">
                 <Link href="/dashboard/default">
-                  Open the dashboard
+                  Request a demo
                   <ArrowRight />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="#capabilities">Explore capabilities</Link>
+                <Link href="#capabilities">Explore the platform</Link>
               </Button>
             </div>
             <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-muted-foreground text-sm">
               <span className="inline-flex items-center gap-2">
                 <Check className="size-4 text-primary" />
-                One connected workspace
+                One intelligent platform
               </span>
               <span className="inline-flex items-center gap-2">
                 <Check className="size-4 text-primary" />
-                Built for everyday decisions
+                Built for every part of care
               </span>
             </div>
           </div>
@@ -81,36 +88,36 @@ export default function Home() {
             <CardHeader className="relative border-border/60 border-b pb-4">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <CardDescription>Workspace snapshot</CardDescription>
-                  <CardTitle className="mt-1 text-xl">Good morning, team</CardTitle>
+                  <CardDescription>H.E.O.S. Command Center</CardDescription>
+                  <CardTitle className="mt-1 text-xl">Every outcome in view</CardTitle>
                 </div>
-                <Badge variant="secondary">Live view</Badge>
+                <Badge variant="secondary">Live signal</Badge>
               </div>
             </CardHeader>
             <CardContent className="relative space-y-5 pt-5">
               <div className="grid grid-cols-3 gap-3">
                 <div className="rounded-lg border bg-background/70 p-3">
-                  <p className="text-muted-foreground text-xs">Active accounts</p>
-                  <p className="mt-2 font-medium text-2xl tracking-tight">45,678</p>
-                  <p className="mt-1 text-muted-foreground text-xs">+12.5% this month</p>
+                  <p className="text-muted-foreground text-xs">30-day readmissions</p>
+                  <p className="mt-2 font-medium text-2xl tracking-tight">6.2%</p>
+                  <p className="mt-1 text-muted-foreground text-xs">-1.8 pts</p>
                 </div>
                 <div className="rounded-lg border bg-background/70 p-3">
-                  <p className="text-muted-foreground text-xs">New customers</p>
-                  <p className="mt-2 font-medium text-2xl tracking-tight">1,234</p>
-                  <p className="mt-1 text-muted-foreground text-xs">This quarter</p>
+                  <p className="text-muted-foreground text-xs">Clean claim rate</p>
+                  <p className="mt-2 font-medium text-2xl tracking-tight">98.4%</p>
+                  <p className="mt-1 text-muted-foreground text-xs">+3.1 pts</p>
                 </div>
                 <div className="rounded-lg border bg-background/70 p-3">
-                  <p className="text-muted-foreground text-xs">Growth rate</p>
-                  <p className="mt-2 font-medium text-2xl tracking-tight">4.5%</p>
-                  <p className="mt-1 text-muted-foreground text-xs">On target</p>
+                  <p className="text-muted-foreground text-xs">Documentation time</p>
+                  <p className="mt-2 font-medium text-2xl tracking-tight">2 min</p>
+                  <p className="mt-1 text-muted-foreground text-xs">-41 min</p>
                 </div>
               </div>
 
               <div className="rounded-lg border bg-background/70 p-4">
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <p className="font-medium text-sm">Customer activity</p>
-                    <p className="mt-1 text-muted-foreground text-xs">Last 3 months</p>
+                    <p className="font-medium text-sm">Operational intelligence</p>
+                    <p className="mt-1 text-muted-foreground text-xs">Real-time system view</p>
                   </div>
                   <LineChart className="size-4 text-muted-foreground" />
                 </div>
@@ -130,13 +137,12 @@ export default function Home() {
 
       <section id="capabilities" className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
         <div className="max-w-2xl">
-          <p className="font-medium text-primary text-sm uppercase tracking-[0.18em]">Everything in view</p>
+          <p className="font-medium text-primary text-sm uppercase tracking-[0.18em]">One platform, every function</p>
           <h2 className="mt-3 font-heading font-semibold text-3xl tracking-tight sm:text-4xl">
-            A focused home for the signals that matter.
+            Replace a dozen point solutions with one intelligence layer.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground leading-8">
-            Start with the overview, then move into the detail you need. The dashboard keeps your team aligned without
-            adding noise.
+            One connected platform for the clinical, financial, and operational work that keeps healthcare moving.
           </p>
         </div>
 
@@ -146,13 +152,16 @@ export default function Home() {
               <div className="mb-3 flex size-10 items-center justify-center rounded-lg border bg-muted text-muted-foreground">
                 <LineChart className="size-5" />
               </div>
-              <CardTitle>Understand momentum</CardTitle>
-              <CardDescription>See the trends behind your activity and spot meaningful changes early.</CardDescription>
+              <CardTitle>Universal Patient Record</CardTitle>
+              <CardDescription>
+                One globally unique patient identity across every hospital, clinic, pharmacy, and carrier. No
+                duplicates. No faxing.
+              </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="flex items-center gap-2 text-muted-foreground text-sm">
                 <Check className="size-4 text-primary" />
-                Performance at a glance
+                Identity across every care setting
               </div>
             </CardContent>
           </Card>
@@ -162,15 +171,16 @@ export default function Home() {
               <div className="mb-3 flex size-10 items-center justify-center rounded-lg border bg-muted text-muted-foreground">
                 <Layers3 className="size-5" />
               </div>
-              <CardTitle>Keep context close</CardTitle>
+              <CardTitle>Autonomous Documentation</CardTitle>
               <CardDescription>
-                Bring customer records, status, and recent activity together in one place.
+                AI listens during visits and drafts SOAP notes, H&amp;P, referrals, and orders in real time. Providers
+                approve—never type.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="flex items-center gap-2 text-muted-foreground text-sm">
                 <Check className="size-4 text-primary" />
-                Less searching, more doing
+                More time for patients
               </div>
             </CardContent>
           </Card>
@@ -180,15 +190,16 @@ export default function Home() {
               <div className="mb-3 flex size-10 items-center justify-center rounded-lg border bg-muted text-muted-foreground">
                 <ShieldCheck className="size-5" />
               </div>
-              <CardTitle>Make confident calls</CardTitle>
+              <CardTitle>Revenue Cycle, Automated</CardTitle>
               <CardDescription>
-                Use a consistent view of the work to turn updates into clear next steps.
+                Eligibility, coding, claim scrubbing, denial management, and payment posting—end to end, with zero
+                manual intervention.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="flex items-center gap-2 text-muted-foreground text-sm">
                 <Check className="size-4 text-primary" />
-                Designed for clarity
+                From eligibility to payment
               </div>
             </CardContent>
           </Card>
@@ -198,17 +209,17 @@ export default function Home() {
       <section id="workflow" className="border-border/60 border-y bg-muted/20">
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:px-8 lg:py-24">
           <div>
-            <Badge variant="secondary">From overview to action</Badge>
+            <Badge variant="secondary">Revenue cycle</Badge>
             <h2 className="mt-4 font-heading font-semibold text-3xl tracking-tight sm:text-4xl">
-              Start broad. Go deeper when it counts.
+              Zero manual intervention, from eligibility to payment.
             </h2>
             <p className="mt-4 max-w-lg text-lg text-muted-foreground leading-8">
-              The public site is your front door. The dashboard is where the day gets done. Move between both without
-              losing your place.
+              Insurance verification, coding, claim scrubbing, denial management, and payment posting all run
+              automatically—with AI explaining every code it recommends.
             </p>
             <Button asChild className="mt-8" variant="outline">
               <Link href="/dashboard/default">
-                Enter the workspace
+                Explore the platform
                 <ArrowRight />
               </Link>
             </Button>
@@ -220,9 +231,13 @@ export default function Home() {
                 <div className="flex size-9 items-center justify-center rounded-full bg-primary font-medium text-primary-foreground text-sm">
                   01
                 </div>
-                <h3 className="mt-5 font-medium">Orient</h3>
+                <h3 className="mt-5 font-medium uppercase tracking-wide">Before visit</h3>
                 <p className="mt-2 text-muted-foreground text-sm leading-6">
-                  Open with the signals that deserve attention today.
+                  Insurance verification
+                  <br />
+                  Eligibility checks
+                  <br />
+                  Prior authorization
                 </p>
               </CardContent>
             </Card>
@@ -231,9 +246,13 @@ export default function Home() {
                 <div className="flex size-9 items-center justify-center rounded-full bg-primary font-medium text-primary-foreground text-sm">
                   02
                 </div>
-                <h3 className="mt-5 font-medium">Explore</h3>
+                <h3 className="mt-5 font-medium uppercase tracking-wide">During visit</h3>
                 <p className="mt-2 text-muted-foreground text-sm leading-6">
-                  Follow the detail behind a trend, account, or update.
+                  Coding recommendation
+                  <br />
+                  HCC capture
+                  <br />
+                  Risk adjustment
                 </p>
               </CardContent>
             </Card>
@@ -242,9 +261,13 @@ export default function Home() {
                 <div className="flex size-9 items-center justify-center rounded-full bg-primary font-medium text-primary-foreground text-sm">
                   03
                 </div>
-                <h3 className="mt-5 font-medium">Act</h3>
+                <h3 className="mt-5 font-medium uppercase tracking-wide">After visit</h3>
                 <p className="mt-2 text-muted-foreground text-sm leading-6">
-                  Turn a clear view into the next useful decision.
+                  Claim generation &amp; scrubbing
+                  <br />
+                  Submission &amp; follow-up
+                  <br />
+                  Denial management
                 </p>
               </CardContent>
             </Card>
@@ -256,19 +279,18 @@ export default function Home() {
         <Card className="overflow-hidden bg-primary text-primary-foreground shadow-lg">
           <div className="grid gap-8 p-8 sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center lg:p-12">
             <div className="max-w-2xl">
-              <p className="font-medium text-primary-foreground/70 text-sm uppercase tracking-[0.18em]">
-                Your next view starts here
-              </p>
+              <p className="font-medium text-primary-foreground/70 text-sm uppercase tracking-[0.18em]">Not an EHR</p>
               <h2 className="mt-3 font-heading font-semibold text-3xl tracking-tight sm:text-4xl">
-                Bring the whole picture into focus.
+                The operating system for humanity&apos;s healthcare.
               </h2>
               <p className="mt-4 max-w-xl text-lg text-primary-foreground/75 leading-8">
-                Open the dashboard and make the next decision with the context already in front of you.
+                Frictionless for patients. Effortless for providers. Predictable for executives. Interoperable for the
+                ecosystem.
               </p>
             </div>
             <Button asChild size="lg" variant="secondary">
               <Link href="/dashboard/default">
-                Open dashboard
+                Request a demo
                 <ArrowUpRight />
               </Link>
             </Button>
@@ -280,9 +302,9 @@ export default function Home() {
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-6 py-8 text-muted-foreground text-sm sm:flex-row sm:items-center sm:justify-between lg:px-8">
           <div className="flex items-center gap-2">
             <Command className="size-4" />
-            <span>Studio Admin</span>
+            <span>H.E.O.S.</span>
           </div>
-          <p>Keep the important work moving.</p>
+          <p>The Healthcare Operating System for humanity&apos;s healthcare.</p>
         </div>
       </footer>
     </main>
