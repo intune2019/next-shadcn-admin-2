@@ -73,7 +73,9 @@ export const recentCustomersColumns: ColumnDef<DataTableFeatures, RecentCustomer
         <div className="min-w-0 flex-1">
           <div className="flex items-end justify-between gap-3">
             <div className="grid min-w-0 gap-0.5">
-              <span className="truncate font-medium text-sm leading-none">{row.original.name}</span>
+              <a className="truncate font-medium text-sm leading-none hover:underline" href={`/patients/${row.original.id}`}>
+                {row.original.name}
+              </a>
               <span className="truncate text-muted-foreground text-xs leading-none">#{row.original.id}</span>
             </div>
           </div>
