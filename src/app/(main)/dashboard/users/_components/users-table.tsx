@@ -84,8 +84,8 @@ export function UsersTable({ table }: { table: ReactTable<DataTableFeatures, Use
 
       <Separator />
 
-      <div className="flex items-center justify-between px-4">
-        <div className="flex items-center gap-4 text-muted-foreground text-sm">
+      <div className="flex flex-col items-stretch gap-3 px-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-wrap items-center justify-between gap-4 text-muted-foreground text-sm">
           <div className="flex items-center gap-2">
             <span>Rows per page</span>
             <Select

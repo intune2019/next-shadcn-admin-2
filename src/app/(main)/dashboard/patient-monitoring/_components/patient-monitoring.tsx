@@ -44,14 +44,14 @@ export function PatientMonitoring({ patients }: PatientMonitoringProps) {
       </div>
 
       <div className="flex min-w-0 flex-col border-border lg:border-l">
-        <div className="flex min-h-11 items-center gap-4 bg-muted/50 px-3">
-          <div className="flex items-center gap-3 font-medium">
+        <div className="flex min-h-11 flex-col items-start gap-2 bg-muted/50 px-3 py-2 sm:flex-row sm:items-center sm:gap-4">
+          <div className="flex min-w-0 flex-wrap items-center gap-3 font-medium">
             <Badge className="rounded-none" variant="outline">
               {selectedPatient.bed}
             </Badge>
-            <span className="text-lg">{selectedPatient.name}</span>
+            <span className="truncate text-lg">{selectedPatient.name}</span>
           </div>
-          <div className="text-muted-foreground text-sm">
+          <div className="min-w-0 text-muted-foreground text-sm">
             {selectedPatient.age} {selectedPatient.sex} · {selectedPatient.diagnosis}
           </div>
         </div>
@@ -60,7 +60,7 @@ export function PatientMonitoring({ patients }: PatientMonitoringProps) {
         {selectedPatient.alarm && (
           <Alert
             className={cn(
-              "min-h-9 rounded-none border-x-0 border-t-0 pr-32",
+              "min-h-9 rounded-none border-x-0 border-t-0 pb-12 pr-3 sm:pr-32 sm:pb-2",
               hasActiveAlarm
                 ? "border-amber-500 bg-amber-400 text-amber-950"
                 : "border-border bg-muted text-foreground",
@@ -73,7 +73,7 @@ export function PatientMonitoring({ patients }: PatientMonitoringProps) {
                 Active for {selectedPatient.alarmDuration}
               </AlertDescription>
             )}
-            <AlertAction className="top-1/2 -translate-y-1/2">
+            <AlertAction className="right-2 bottom-2 top-auto translate-y-0 sm:top-1/2 sm:bottom-auto sm:-translate-y-1/2">
               <Button
                 className="rounded-none"
                 disabled={acknowledged}
@@ -91,7 +91,7 @@ export function PatientMonitoring({ patients }: PatientMonitoringProps) {
 
         <Tabs className="min-h-0 flex-1 gap-0" defaultValue="trends">
           <TabsList
-            className="w-full justify-start gap-0 border-b p-0 *:h-full *:max-w-32 *:rounded-none *:border-0 *:border-border *:border-r *:after:-bottom-px!"
+            className="w-full justify-start gap-0 overflow-x-auto border-b p-0 *:h-full *:max-w-32 *:rounded-none *:border-0 *:border-border *:border-r *:after:-bottom-px!"
             variant="line"
           >
             <TabsTrigger value="real-time">Real time</TabsTrigger>

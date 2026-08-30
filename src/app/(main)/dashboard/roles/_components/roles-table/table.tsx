@@ -93,12 +93,12 @@ export function RolesTable({ table }: { table: ReactTable<DataTableFeatures, Rol
         </TableBody>
       </Table>
 
-      <div className="flex items-center border-border/70 border-t p-4">
+      <div className="flex flex-col items-stretch gap-3 border-border/70 border-t p-4 sm:flex-row sm:items-center">
         <div className="text-muted-foreground text-sm">
           Showing {start} to {end} of {filteredRows.length} roles
         </div>
 
-        <div className="mx-auto">
+        <div className="sm:mx-auto">
           <Pagination className="mx-0 w-auto justify-center">
             <PaginationContent>
               <PaginationItem>
@@ -141,7 +141,7 @@ export function RolesTable({ table }: { table: ReactTable<DataTableFeatures, Rol
           </Pagination>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center justify-between gap-2 sm:justify-normal">
           <span className="text-muted-foreground text-sm">Rows per page</span>
           <Select
             value={`${pageSize}`}

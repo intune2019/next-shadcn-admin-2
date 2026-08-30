@@ -28,14 +28,14 @@ export function InvoicePreview({ invoice }: { invoice: InvoiceFormValues }) {
     <>
       <PrintInvoice invoice={invoice} />
       <div className="flex flex-col rounded-xl border bg-card">
-        <div className="flex items-center justify-between px-4 py-4">
+        <div className="flex flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="font-medium text-lg">Preview</h2>
-          <ButtonGroup>
-            <Button type="button" variant="outline" onClick={handlePrint}>
+          <ButtonGroup className="w-full sm:w-fit">
+            <Button className="flex-1 sm:flex-none" type="button" variant="outline" onClick={handlePrint}>
               <Printer data-icon="inline-start" />
               Print
             </Button>
-            <Button type="button" variant="outline">
+            <Button className="flex-1 sm:flex-none" type="button" variant="outline">
               <Download data-icon="inline-start" />
               Download PDF
             </Button>

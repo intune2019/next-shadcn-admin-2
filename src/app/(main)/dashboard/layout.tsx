@@ -50,8 +50,8 @@ export default async function Layout({ children }: Readonly<{ children: ReactNod
             "[html[data-navbar-style=sticky]_&]:sticky [html[data-navbar-style=sticky]_&]:top-0 [html[data-navbar-style=sticky]_&]:z-50 [html[data-navbar-style=sticky]_&]:overflow-hidden [html[data-navbar-style=sticky]_&]:rounded-t-[inherit] [html[data-navbar-style=sticky]_&]:bg-background/50 [html[data-navbar-style=sticky]_&]:backdrop-blur-md",
           )}
         >
-          <div className="flex w-full items-center justify-between px-4 lg:px-6">
-            <div className="flex items-center gap-1 lg:gap-2">
+          <div className="flex w-full min-w-0 flex-wrap items-center justify-between gap-2 px-4 lg:px-6">
+            <div className="flex min-w-0 items-center gap-1 lg:gap-2">
               <SidebarTrigger className="-ml-1" />
               <Separator
                 orientation="vertical"
@@ -59,7 +59,7 @@ export default async function Layout({ children }: Readonly<{ children: ReactNod
               />
               <SearchDialog />
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center justify-end gap-2">
               <LayoutControls />
               <ThemeSwitcher />
               <GitHubRepositoriesMenu />

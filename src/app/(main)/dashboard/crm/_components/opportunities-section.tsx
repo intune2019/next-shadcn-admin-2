@@ -93,15 +93,15 @@ export function OpportunitiesSection() {
   return (
     <section>
       <Card>
-        <CardHeader>
+        <CardHeader className="has-data-[slot=card-action]:grid-cols-1 md:has-data-[slot=card-action]:grid-cols-[1fr_auto]">
           <CardTitle className="leading-none">Recent Opportunities</CardTitle>
           <CardDescription>
             Track qualified leads moving through discovery, proposal, and closing stages.
           </CardDescription>
-          <CardAction>
-            <div className="flex items-center gap-2">
+          <CardAction className="col-start-1 row-start-auto flex w-full flex-wrap items-center gap-2 justify-self-stretch md:col-start-2 md:row-span-2 md:row-start-1 md:w-auto md:justify-self-end">
+            <div className="flex w-full flex-wrap items-center gap-2 md:w-auto">
               <Input
-                className="h-7 w-44 md:w-52"
+                className="h-7 w-full sm:w-44 md:w-52"
                 placeholder="Search deals..."
                 value={searchQuery}
                 onChange={(event) => {
@@ -195,12 +195,12 @@ export function OpportunitiesSection() {
               </TableBody>
             </Table>
           </div>
-          <div className="flex items-center justify-between gap-4 px-4 pb-1">
+          <div className="flex flex-col gap-3 px-4 pb-1 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-muted-foreground text-sm">
               Viewing {visibleOpportunityCount} out of {filteredOpportunityCount.toLocaleString()} opportunities
             </p>
 
-            <Pagination className="mx-0 w-auto justify-end">
+            <Pagination className="mx-0 w-auto justify-start sm:justify-end">
               <PaginationContent className="gap-1.5">
                 <PaginationItem>
                   <PaginationPrevious
