@@ -11,14 +11,14 @@ import { SubscriberOverview } from "./_components/subscriber-overview";
 
 export default function Page() {
   return (
-    <div className="@container/main flex flex-col gap-4 md:gap-6">
-      <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+    <div className="@container/main flex flex-col gap-4">
+      <div className="flex flex-col gap-2 sm:gap-3 md:flex-row md:items-end md:justify-between">
         <div className="space-y-1">
           <div className="flex flex-wrap items-center gap-2">
             <h1 className="text-3xl tracking-tight">Clinical command center</h1>
             <Badge variant="outline">Live workspace</Badge>
           </div>
-          <p className="text-muted-foreground text-sm">A connected view of patients, care delivery, and practice performance.</p>
+          <p className="max-w-2xl text-muted-foreground text-sm">A connected view of patients, care delivery, and practice performance.</p>
         </div>
         <Badge variant="secondary">Northstar Health · All locations</Badge>
       </div>

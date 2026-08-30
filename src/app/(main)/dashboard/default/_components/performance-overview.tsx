@@ -238,7 +238,7 @@ export function PerformanceOverview() {
           <span className="@[540px]/card:block hidden">Appointments, encounters, and referrals for the last 3 months</span>
           <span className="@[540px]/card:hidden">Last 3 months</span>
         </CardDescription>
-        <CardAction className="flex items-center gap-2">
+        <CardAction className="col-start-1 row-start-auto flex flex-wrap items-center gap-2 justify-self-stretch md:col-start-2 md:row-span-2 md:row-start-1 md:justify-self-end">
           <Select defaultValue="quarter">
             <SelectTrigger size="sm" className="w-28">
               <SelectValue placeholder="3 months" />

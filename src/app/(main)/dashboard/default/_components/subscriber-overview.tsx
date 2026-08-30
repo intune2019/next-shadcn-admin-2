@@ -25,7 +25,7 @@ export function SubscriberOverview() {
         </CardAction>
       </CardHeader>
 
-      <CardContent className="pt-0">
+      <CardContent className="overflow-x-auto pt-0">
         <RecentCustomersTable data={customers} />
       </CardContent>
     </Card>

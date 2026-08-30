@@ -29,9 +29,9 @@ export function TasksSection() {
 
   return (
     <section className="flex flex-col gap-2">
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <h2 className="text-xl tracking-tight">Work queue</h2>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <Select defaultValue="today">
             <SelectTrigger className="w-30">
               <SelectValue placeholder="Today" />
@@ -44,7 +44,7 @@ export function TasksSection() {
               </SelectGroup>
             </SelectContent>
           </Select>
-          <Button>
+          <Button size="sm">
             <Plus data-icon="inline-start" />
             Add work item
           </Button>
