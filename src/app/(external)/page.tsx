@@ -60,7 +60,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="border-border/60 border-b">
+      <section className="border-border/60 border-b bg-muted/20">
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-16 md:py-24 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:gap-20 lg:px-8 lg:py-28">
           <div className="max-w-2xl">
             <Badge variant="outline" className="my-1.5 -mr-[63px] -ml-[63px] justify-end gap-2 px-3.5 py-6 text-xl">
