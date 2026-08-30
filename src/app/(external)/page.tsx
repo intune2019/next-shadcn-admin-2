@@ -43,21 +43,15 @@ export default function Home() {
       <section className="border-border/60 border-b">
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-16 md:py-24 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:gap-20 lg:px-8 lg:py-28">
           <div className="max-w-2xl">
-            <Badge variant="outline" className="gap-2 px-3 py-1">
+            <Badge variant="outline" className="my-1.5 -mr-[63px] -ml-[63px] justify-end gap-2 px-3.5 py-6 text-xl">
               <span className="size-1.5 rounded-full bg-primary" />
-              The Healthcare Operating System
+              EVERY PART OF HEALTCARE
             </Badge>
-            <h1 className="mt-6 max-w-xl font-heading font-semibold text-4xl tracking-tight sm:text-5xl lg:text-6xl">
-              One Record
-              <br />
-              One Intelligence Layer
-              <br />
-              Every Part of Healthcare
-              <br />
+            <h1 className="mt-6 -ml-[67px] max-w-xl font-heading font-semibold text-[148px] tracking-tight">
               <span className="text-primary">UNIFIED</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-muted-foreground leading-8">
-              H.E.O.S. is the central nervous system for healthcare organizations of every size—replacing your EHR,
+              H.E.O.S. is the central nervous system for healthcare organizations of every size; replacing your EHR,
               practice management, and revenue cycle tools with one autonomous, predictive platform.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
