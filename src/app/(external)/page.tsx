@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { ArrowRight, ArrowUpRight, Check, Command, Layers3, LineChart, ShieldCheck } from "lucide-react";
 
+import { ThemeSwitcher } from "@/app/(main)/dashboard/_components/header/theme-switcher";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -27,12 +28,15 @@ export default function Home() {
             </Link>
           </nav>
 
-          <Button asChild size="sm">
-            <Link href="/dashboard/default">
-              Open dashboard
-              <ArrowUpRight />
-            </Link>
-          </Button>
+          <div className="flex items-center gap-2">
+            <ThemeSwitcher />
+            <Button asChild size="sm">
+              <Link href="/dashboard/default">
+                Open dashboard
+                <ArrowUpRight />
+              </Link>
+            </Button>
+          </div>
         </div>
       </header>
 
